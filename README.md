@@ -1,36 +1,216 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Template Marketplace Platform
 
-## Getting Started
+Multi-tenant template marketplace dengan sistem full customization untuk User, Contributor, dan Admin.
 
-First, run the development server:
+## 🎯 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### 3 User Roles
+- **User**: Browse, purchase, dan customize templates
+- **Contributor**: Create dan publish templates
+- **Admin**: Manage users, templates, domains, dan system
+
+### Template System
+- Dynamic folder-based templates
+- 17+ editable slot types untuk full customization
+- Custom domain dan subdomain routing
+- Multi-page support dengan dynamic pages
+
+### Full Customization
+User bisa edit semua aspek visual:
+- Layout variants (centered, split-screen, grid)
+- Typography (fonts, sizes, weights)
+- Colors, gradients, shadows
+- Spacing, sizing, border radius
+- Animations dan transitions
+- Button styles dan effects
+
+## 📁 Project Structure
+
+```
+my-project-templates/
+├── src/
+│   ├── app/                    # Next.js App Router
+│   │   ├── (public)/          # Public marketplace
+│   │   ├── (admin)/           # Admin dashboard
+│   │   ├── (contributor)/     # Contributor dashboard
+│   │   ├── (user)/            # User dashboard
+│   │   └── api/               # API routes
+│   │
+│   ├── templates/             # Template repository
+│   │   ├── wedding-elegant/   # Example template
+│   │   └── shared/            # Shared utilities
+│   │
+│   ├── lib/
+│   │   └── engines/
+│   │       ├── template-engine/    # Load & render templates
+│   │       ├── editor-engine/      # Visual editors
+│   │       ├── domain-engine/      # DNS & routing
+│   │       ├── cms/                # Content management
+│   │       └── payment/            # Payment processing
+│   │
+│   ├── components/            # React components
+│   └── types/                 # TypeScript types
+│
+├── scripts/                   # Database migrations
+├── tools/                     # Python CLI tools (future)
+└── docs/                      # Documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node.js 18+
+- PostgreSQL 14+
+- npm or pnpm
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone repository:
+```bash
+git clone <repo-url>
+cd my-project-templates
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Setup environment:
+```bash
+cp .env.example .env
+# Edit .env dengan database credentials
+```
 
-## Deploy on Vercel
+4. Run migrations:
+```bash
+npm run db:migrate
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. Start dev server:
+```bash
+npm run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Visit http://localhost:3000
+
+## 📖 Documentation
+
+Lihat folder `docs/` untuk dokumentasi lengkap:
+
+- [Database Schema](../docs/database-schema.md)
+- [Folder Structure](../docs/folder-structure.md)
+- [Engine Architecture](../docs/engine-architecture.md)
+- [Template System](../docs/template-system.md)
+- [Editable Slot Types](../docs/editable-slot-types.md)
+- [AI Autopilot Prompts](../docs/ai-autopilot-prompts.md)
+
+## 🎨 Creating Templates
+
+### Method 1: Visual Editor (Future)
+Contributor akan bisa create templates via drag & drop canvas editor.
+
+### Method 2: Hardcode (Current)
+
+1. Create folder structure:
+```bash
+src/templates/{template-slug}/
+├── manifest.json       # Template metadata & slots
+├── layout.tsx          # Template layout wrapper
+├── page.tsx            # Main template page
+├── components/         # Template components
+│   └── sections/       # Section components
+├── types/              # Type definitions
+└── lib/                # Utilities
+```
+
+2. Define manifest.json dengan editable slots
+3. Implement layout.tsx dan page.tsx
+4. Create section components dengan useSlotValue hooks
+5. Test dengan TemplateRenderer
+
+## 🔧 Tech Stack
+
+- **Frontend**: Next.js 15, React 18, TypeScript
+- **Styling**: TailwindCSS, CSS Variables
+- **Database**: PostgreSQL with JSONB
+- **State**: Zustand (future)
+- **UI Components**: Radix UI
+- **Tools**: Python CLI (future)
+
+## 🗄️ Database
+
+Schema includes:
+- users (role-based access)
+- templates (catalog)
+- template_purchases
+- template_instances (deployed sites)
+- template_pages (dynamic pages)
+- domains (custom domains)
+- earnings (contributor revenue)
+
+Run migrations:
+```bash
+npm run db:migrate
+```
+
+Reset database (⚠️ destructive):
+```bash
+npm run db:reset
+```
+
+## 🎯 Roadmap
+
+### Phase 1: Core System ✅
+- [x] Project setup
+- [x] Database schema
+- [x] Template engine
+- [x] First template (wedding-elegant)
+- [x] Documentation
+
+### Phase 2: Template System (Current)
+- [ ] Template loader optimization
+- [ ] More slot types implementation
+- [ ] Template validation
+- [ ] Preview system
+
+### Phase 3: Editor System
+- [ ] User editor UI
+- [ ] Contributor canvas editor
+- [ ] Slot editor components
+- [ ] Live preview
+
+### Phase 4: Domain & Routing
+- [ ] Domain verification
+- [ ] Subdomain routing
+- [ ] Middleware implementation
+- [ ] DNS management
+
+### Phase 5: Platform Features
+- [ ] Admin dashboard
+- [ ] Payment integration
+- [ ] User dashboard
+- [ ] Contributor dashboard
+
+### Phase 6: Tools & Optimization
+- [ ] Python CLI generator
+- [ ] Template validator
+- [ ] Performance optimization
+- [ ] Testing suite
+
+## 🤝 Contributing
+
+1. Read documentation in `docs/`
+2. Follow folder structure conventions
+3. Use TypeScript strict mode
+4. Test templates before submitting
+5. Document editable slots in manifest.json
+
+## 📝 License
+
+Private - All rights reserved
+
+---
+
+**Built with ❤️ for KOREK/WEB Project**

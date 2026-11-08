@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="Restaurant Menu template preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#241610"/>
+      <stop offset="0.6" stop-color="#2f1d13"/>
+      <stop offset="1" stop-color="#160e0a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#ea580c"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.25" r="0.75">
+      <stop offset="0" stop-color="#f59e0b" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect width="1200" height="900" fill="url(#glow)"/>
+  <text x="600" y="200" text-anchor="middle" font-family="Georgia, serif" font-size="64" fill="#ffffff">The Fire Kitchen</text>
+  <text x="600" y="250" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#f6c99a" letter-spacing="10">WOOD FIRED · EST. 2016</text>
+  <line x1="470" y1="300" x2="730" y2="300" stroke="url(#accent)" stroke-width="2"/>
+  <g>
+    <rect x="120" y="360" width="440" height="150" rx="16" fill="#ffffff" opacity="0.05"/>
+    <rect x="640" y="360" width="440" height="150" rx="16" fill="#ffffff" opacity="0.05"/>
+    <rect x="120" y="540" width="440" height="150" rx="16" fill="#ffffff" opacity="0.05"/>
+    <rect x="640" y="540" width="440" height="150" rx="16" fill="#ffffff" opacity="0.05"/>
+    <circle cx="190" cy="420" r="34" fill="url(#accent)" opacity="0.85"/>
+    <circle cx="710" cy="420" r="34" fill="url(#accent)" opacity="0.85"/>
+    <circle cx="190" cy="600" r="34" fill="url(#accent)" opacity="0.7"/>
+    <circle cx="710" cy="600" r="34" fill="url(#accent)" opacity="0.7"/>
+    <rect x="250" y="400" width="180" height="12" rx="6" fill="#ffffff" opacity="0.8"/>
+    <rect x="250" y="426" width="260" height="8" rx="4" fill="#d8b48f" opacity="0.5"/>
+    <rect x="770" y="400" width="180" height="12" rx="6" fill="#ffffff" opacity="0.8"/>
+    <rect x="770" y="426" width="260" height="8" rx="4" fill="#d8b48f" opacity="0.5"/>
+    <rect x="250" y="580" width="180" height="12" rx="6" fill="#ffffff" opacity="0.8"/>
+    <rect x="250" y="606" width="260" height="8" rx="4" fill="#d8b48f" opacity="0.5"/>
+    <rect x="770" y="580" width="180" height="12" rx="6" fill="#ffffff" opacity="0.8"/>
+    <rect x="770" y="606" width="260" height="8" rx="4" fill="#d8b48f" opacity="0.5"/>
+  </g>
+  <rect x="480" y="760" width="240" height="56" rx="28" fill="url(#accent)"/>
+  <text x="600" y="795" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#241610">RESERVE A TABLE</text>
+</svg>

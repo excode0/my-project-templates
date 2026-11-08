@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 24.6 95% 53.1%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 33 100% 96.3%;
+    --accent-foreground: 20.5 90.2% 48.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 24.6 95% 53.1%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background-color: rgba(249, 115, 22, 0.24);
+    color: #0f172a;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+}
+
+@layer components {
+  /*
+   * Dynamic template canvas.
+   * Keeps template styles and CSS variables scoped so they cannot bleed into
+   * the marketplace, dashboard, or editor chrome (and vice versa).
+   */
+  .template-canvas {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--background-color, #ffffff);
+    color: var(--text-color, #1f2937);
+    font-family: var(--font-family, 'Inter', system-ui, sans-serif);
+    line-height: 1.6;
+  }
+
+  .template-canvas *,
+  .template-canvas *::before,
+  .template-canvas *::after {
+    box-sizing: border-box;
+  }
+
+  .template-canvas img,
+  .template-canvas video,
+  .template-canvas svg {
+    max-width: 100%;
+  }
+}
+
+@layer utilities {
+  .text-gradient-fire {
+    background-image: linear-gradient(135deg, #f97316 0%, #ea580c 55%, #dc2626 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(15, 23, 42, 0.055) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(15, 23, 42, 0.055) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  .bg-radial-fire {
+    background-image: radial-gradient(circle at 50% 0%, rgba(249, 115, 22, 0.1) 0%, transparent 62%);
+  }
+
+  .glow-fire {
+    box-shadow: 0 0 30px rgba(249, 115, 22, 0.25), 0 0 60px rgba(234, 88, 12, 0.12);
+  }
+
+  .korex-card {
+    @apply rounded-2xl border border-slate-200/80 bg-white shadow-sm;
+  }
+
+  .korex-card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-lg;
+  }
+
+  .korex-btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-fire-500 via-fire-600 to-flame-end px-6 py-3 font-semibold text-white shadow-lg shadow-orange-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-orange-500/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-fire-500/60 focus-visible:ring-offset-2 focus-visible:ring-offset-white;
+  }
+
+  .korex-btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-6 py-3 font-semibold text-slate-700 transition-all duration-300 hover:border-orange-300 hover:text-orange-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-200;
+  }
+
+  .korex-input {
+    @apply w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-orange-400 focus:ring-2 focus:ring-orange-100;
+  }
+
+  .korex-eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-orange-200 bg-orange-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-orange-700;
+  }
+
+  .korex-section {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .korex-h1 {
+    @apply font-display text-4xl font-semibold leading-[1.08] tracking-tight text-slate-950 sm:text-5xl lg:text-6xl;
+  }
+
+  .korex-h2 {
+    @apply font-display text-3xl font-semibold leading-tight tracking-tight text-slate-950 sm:text-4xl;
+  }
+
+  .korex-h3 {
+    @apply font-display text-xl font-semibold text-slate-950;
+  }
+
+  .korex-muted {
+    @apply text-slate-600;
+  }
+}
+
+/* Light Mode Helper Classes */
+.bg-light-card {
+  background-color: white;
+  border: 1px solid #e2e8f0;
+}
+
+.bg-light-card-hover {
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.bg-light-card-hover:hover {
+  border-color: #f97316;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}

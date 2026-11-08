@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="Portfolio Creative template preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#191a2e"/>
+      <stop offset="0.6" stop-color="#221d3a"/>
+      <stop offset="1" stop-color="#0f1117"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.75" cy="0.25" r="0.7">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect width="1200" height="900" fill="url(#glow)"/>
+  <circle cx="980" cy="240" r="170" fill="url(#accent)" opacity="0.35"/>
+  <circle cx="980" cy="240" r="110" fill="#0f1117" opacity="0.5"/>
+  <rect x="90" y="150" width="240" height="16" rx="8" fill="#ffffff" opacity="0.9"/>
+  <rect x="90" y="196" width="180" height="12" rx="6" fill="#a5a3c9" opacity="0.6"/>
+  <text x="90" y="340" font-family="Georgia, serif" font-size="76" fill="#ffffff">Hi, I'm</text>
+  <text x="90" y="430" font-family="Georgia, serif" font-size="76" fill="#a78bfa">John Doe</text>
+  <rect x="90" y="480" width="360" height="12" rx="6" fill="#a5a3c9" opacity="0.5"/>
+  <rect x="90" y="510" width="300" height="12" rx="6" fill="#a5a3c9" opacity="0.4"/>
+  <rect x="90" y="570" width="200" height="56" rx="28" fill="url(#accent)"/>
+  <text x="190" y="605" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff">VIEW WORK</text>
+  <g>
+    <rect x="560" y="560" width="180" height="200" rx="16" fill="#ffffff" opacity="0.06"/>
+    <rect x="760" y="560" width="180" height="200" rx="16" fill="#ffffff" opacity="0.09"/>
+    <rect x="960" y="560" width="180" height="200" rx="16" fill="#ffffff" opacity="0.05"/>
+    <rect x="590" y="600" width="120" height="10" rx="5" fill="#a78bfa" opacity="0.7"/>
+    <rect x="790" y="600" width="120" height="10" rx="5" fill="#818cf8" opacity="0.7"/>
+    <rect x="990" y="600" width="120" height="10" rx="5" fill="#a78bfa" opacity="0.5"/>
+  </g>
+</svg>

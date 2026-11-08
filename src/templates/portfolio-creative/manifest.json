@@ -1,0 +1,347 @@
+{
+  "id": "portfolio-creative",
+  "name": "Portfolio Creative",
+  "description": "Modern and creative portfolio template for designers, developers, and creative professionals. Showcase your work with style.",
+  "category": "portfolio",
+  "version": "1.0.0",
+  "author": "TemplateMKT",
+  "preview_image": "/templates/portfolio-creative/preview.svg",
+  "demo_url": "/demo/portfolio-creative",
+  "price": 150000,
+  "features": [
+    "Responsive design",
+    "Project showcase grid",
+    "About section with skills",
+    "Contact form",
+    "Smooth animations",
+    "Dark mode support",
+    "SEO optimized"
+  ],
+  "pages": [
+    {
+      "id": "home",
+      "name": "Home",
+      "path": "/",
+      "component": "page.tsx"
+    }
+  ],
+  "editableSlots": [
+    {
+      "id": "site.title",
+      "type": "text",
+      "label": "Site Title",
+      "category": "General",
+      "default": "John Doe - Creative Portfolio"
+    },
+    {
+      "id": "site.tagline",
+      "type": "text",
+      "label": "Site Tagline",
+      "category": "General",
+      "default": "Designer & Developer"
+    },
+    {
+      "id": "hero.headline",
+      "type": "text",
+      "label": "Hero Headline",
+      "category": "Hero Section",
+      "default": "Hi, I'm John Doe"
+    },
+    {
+      "id": "hero.subheadline",
+      "type": "text",
+      "label": "Hero Subheadline",
+      "category": "Hero Section",
+      "default": "Creative Designer & Frontend Developer"
+    },
+    {
+      "id": "hero.description",
+      "type": "richtext",
+      "label": "Hero Description",
+      "category": "Hero Section",
+      "default": "I create beautiful digital experiences that make people's lives simpler and more enjoyable."
+    },
+    {
+      "id": "hero.ctaText",
+      "type": "text",
+      "label": "Hero CTA Text",
+      "category": "Hero Section",
+      "default": "View My Work"
+    },
+    {
+      "id": "hero.ctaLink",
+      "type": "link",
+      "label": "Hero CTA Link",
+      "category": "Hero Section",
+      "default": "#projects"
+    },
+    {
+      "id": "hero.image",
+      "type": "image",
+      "label": "Hero Image",
+      "category": "Hero Section",
+      "default": "/templates/portfolio-creative/hero.jpg"
+    },
+    {
+      "id": "hero.layout",
+      "type": "variant",
+      "label": "Hero Layout",
+      "category": "Hero Section",
+      "options": ["centered", "left-right", "full-screen"],
+      "default": "left-right"
+    },
+    {
+      "id": "about.headline",
+      "type": "text",
+      "label": "About Headline",
+      "category": "About Section",
+      "default": "About Me"
+    },
+    {
+      "id": "about.description",
+      "type": "richtext",
+      "label": "About Description",
+      "category": "About Section",
+      "default": "I'm a passionate creative professional with 5+ years of experience in design and development. I love crafting beautiful, functional digital experiences."
+    },
+    {
+      "id": "about.image",
+      "type": "image",
+      "label": "About Image",
+      "category": "About Section",
+      "default": "/templates/portfolio-creative/about.jpg"
+    },
+    {
+      "id": "skills.headline",
+      "type": "text",
+      "label": "Skills Headline",
+      "category": "Skills Section",
+      "default": "My Skills"
+    },
+    {
+      "id": "skills.items",
+      "type": "array",
+      "label": "Skills List",
+      "category": "Skills Section",
+      "validation": {
+        "itemSchema": {
+          "name": {
+            "type": "text",
+            "label": "Skill Name",
+            "default": "UI/UX Design"
+          },
+          "level": {
+            "type": "number",
+            "label": "Skill Level (%)",
+            "default": 90,
+            "validation": {
+              "min": 0,
+              "max": 100
+            }
+          },
+          "icon": {
+            "type": "text",
+            "label": "Icon (emoji or class)",
+            "default": "🎨"
+          }
+        },
+        "minItems": 1,
+        "maxItems": 12
+      },
+      "default": [
+        { "name": "UI/UX Design", "level": 90, "icon": "🎨" },
+        { "name": "Frontend Development", "level": 85, "icon": "💻" },
+        { "name": "Graphic Design", "level": 80, "icon": "🖌️" },
+        { "name": "Motion Design", "level": 75, "icon": "🎬" }
+      ]
+    },
+    {
+      "id": "projects.headline",
+      "type": "text",
+      "label": "Projects Headline",
+      "category": "Projects Section",
+      "default": "Featured Projects"
+    },
+    {
+      "id": "projects.items",
+      "type": "array",
+      "label": "Projects List",
+      "category": "Projects Section",
+      "validation": {
+        "itemSchema": {
+          "title": {
+            "type": "text",
+            "label": "Project Title",
+            "default": "Project Name"
+          },
+          "description": {
+            "type": "text",
+            "label": "Project Description",
+            "default": "Brief description of the project"
+          },
+          "image": {
+            "type": "image",
+            "label": "Project Image",
+            "default": "/templates/portfolio-creative/project.jpg"
+          },
+          "category": {
+            "type": "text",
+            "label": "Category",
+            "default": "Web Design"
+          },
+          "link": {
+            "type": "link",
+            "label": "Project Link",
+            "default": "#"
+          },
+          "tags": {
+            "type": "text",
+            "label": "Tags (comma-separated)",
+            "default": "Design, Development"
+          }
+        },
+        "minItems": 1,
+        "maxItems": 20
+      },
+      "default": [
+        {
+          "title": "E-commerce Platform",
+          "description": "Modern e-commerce platform with seamless UX",
+          "image": "/templates/portfolio-creative/project-1.jpg",
+          "category": "Web Design",
+          "link": "#",
+          "tags": "Design, Development, React"
+        },
+        {
+          "title": "Brand Identity",
+          "description": "Complete brand identity for tech startup",
+          "image": "/templates/portfolio-creative/project-2.jpg",
+          "category": "Branding",
+          "link": "#",
+          "tags": "Branding, Logo, Identity"
+        },
+        {
+          "title": "Mobile App UI",
+          "description": "Beautiful mobile app interface design",
+          "image": "/templates/portfolio-creative/project-3.jpg",
+          "category": "Mobile Design",
+          "link": "#",
+          "tags": "UI Design, Mobile, Figma"
+        }
+      ]
+    },
+    {
+      "id": "projects.layout",
+      "type": "variant",
+      "label": "Projects Layout",
+      "category": "Projects Section",
+      "options": ["grid-2", "grid-3", "masonry"],
+      "default": "grid-3"
+    },
+    {
+      "id": "contact.headline",
+      "type": "text",
+      "label": "Contact Headline",
+      "category": "Contact Section",
+      "default": "Get In Touch"
+    },
+    {
+      "id": "contact.description",
+      "type": "richtext",
+      "label": "Contact Description",
+      "category": "Contact Section",
+      "default": "Have a project in mind? Let's work together to create something amazing."
+    },
+    {
+      "id": "contact.email",
+      "type": "text",
+      "label": "Contact Email",
+      "category": "Contact Section",
+      "default": "hello@johndoe.com"
+    },
+    {
+      "id": "contact.phone",
+      "type": "text",
+      "label": "Contact Phone",
+      "category": "Contact Section",
+      "default": "+1 234 567 890"
+    },
+    {
+      "id": "social.github",
+      "type": "link",
+      "label": "GitHub URL",
+      "category": "Social Links",
+      "default": "https://github.com/johndoe"
+    },
+    {
+      "id": "social.linkedin",
+      "type": "link",
+      "label": "LinkedIn URL",
+      "category": "Social Links",
+      "default": "https://linkedin.com/in/johndoe"
+    },
+    {
+      "id": "social.twitter",
+      "type": "link",
+      "label": "Twitter URL",
+      "category": "Social Links",
+      "default": "https://twitter.com/johndoe"
+    },
+    {
+      "id": "social.dribbble",
+      "type": "link",
+      "label": "Dribbble URL",
+      "category": "Social Links",
+      "default": "https://dribbble.com/johndoe"
+    },
+    {
+      "id": "colors.primary",
+      "type": "color",
+      "label": "Primary Color",
+      "category": "Design",
+      "default": "#6366f1"
+    },
+    {
+      "id": "colors.secondary",
+      "type": "color",
+      "label": "Secondary Color",
+      "category": "Design",
+      "default": "#8b5cf6"
+    },
+    {
+      "id": "colors.background",
+      "type": "color",
+      "label": "Background Color",
+      "category": "Design",
+      "default": "#ffffff"
+    },
+    {
+      "id": "colors.text",
+      "type": "color",
+      "label": "Text Color",
+      "category": "Design",
+      "default": "#1f2937"
+    },
+    {
+      "id": "typography.fontFamily",
+      "type": "font",
+      "label": "Font Family",
+      "category": "Design",
+      "default": "Inter"
+    },
+    {
+      "id": "layout.spacing",
+      "type": "spacing",
+      "label": "Section Spacing",
+      "category": "Design",
+      "default": "large"
+    },
+    {
+      "id": "animation.enabled",
+      "type": "toggle",
+      "label": "Enable Animations",
+      "category": "Design",
+      "default": true
+    }
+  ]
+}

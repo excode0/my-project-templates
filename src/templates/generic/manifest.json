@@ -1,0 +1,136 @@
+{
+  "id": "generic",
+  "name": "KOREX Universal Template",
+  "description": "A flexible, fully customizable template that adapts to any business or personal brand.",
+  "category": "general",
+  "version": "1.0.0",
+  "author": "KOREX",
+  "preview_image": "/templates/generic/preview.svg",
+  "demo_url": "/demo/generic",
+  "price": 0,
+  "features": [
+    "Responsive layout",
+    "Editable content",
+    "Custom colors",
+    "Typography controls",
+    "Feature grid",
+    "Call to action",
+    "Section spacing",
+    "Modern design"
+  ],
+  "pages": [
+    {
+      "id": "home",
+      "name": "Home",
+      "path": "/",
+      "component": "page.tsx"
+    }
+  ],
+  "capabilities": {
+    "maxPages": 1,
+    "editableSlots": [
+      {
+        "id": "content.eyebrow",
+        "type": "text",
+        "label": "Eyebrow Text",
+        "category": "content",
+        "default": "KOREX TEMPLATE"
+      },
+      {
+        "id": "content.title",
+        "type": "text",
+        "label": "Main Title",
+        "category": "content",
+        "default": "Your Brand, Beautifully Presented"
+      },
+      {
+        "id": "content.subtitle",
+        "type": "text",
+        "label": "Subtitle",
+        "category": "content",
+        "default": "A modern, fully customizable template built for your next project."
+      },
+      {
+        "id": "content.description",
+        "type": "richtext",
+        "label": "Description",
+        "category": "content",
+        "default": "Edit every detail from the visual editor. Change the copy, colors, typography and spacing until it feels uniquely yours."
+      },
+      {
+        "id": "content.features",
+        "type": "array",
+        "label": "Features",
+        "category": "content",
+        "default": [
+          "Responsive design",
+          "Custom colors",
+          "Editable content",
+          "Modern layout"
+        ],
+        "validation": {
+          "maxItems": 8
+        }
+      },
+      {
+        "id": "hero.ctaText",
+        "type": "text",
+        "label": "Button Text",
+        "category": "content",
+        "default": "Get Started"
+      },
+      {
+        "id": "hero.ctaLink",
+        "type": "link",
+        "label": "Button Link",
+        "category": "content",
+        "default": "#features"
+      },
+      {
+        "id": "colors.primary",
+        "type": "color",
+        "label": "Primary Color",
+        "category": "style",
+        "default": "#F97316"
+      },
+      {
+        "id": "colors.background",
+        "type": "color",
+        "label": "Background Color",
+        "category": "style",
+        "default": "#0F1117"
+      },
+      {
+        "id": "colors.text",
+        "type": "color",
+        "label": "Text Color",
+        "category": "style",
+        "default": "#FDFBF7"
+      },
+      {
+        "id": "typography.fontFamily",
+        "type": "font",
+        "label": "Font Family",
+        "category": "style",
+        "default": "Inter"
+      },
+      {
+        "id": "layout.spacing",
+        "type": "spacing",
+        "label": "Section Spacing",
+        "category": "layout",
+        "default": "large"
+      }
+    ]
+  },
+  "editorConfig": {
+    "allowedComponents": ["hero", "features", "cta"]
+  },
+  "defaultPages": [
+    {
+      "slug": "home",
+      "name": "Home",
+      "isDynamic": false
+    }
+  ]
+}

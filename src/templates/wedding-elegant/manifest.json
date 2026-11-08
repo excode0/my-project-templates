@@ -1,0 +1,285 @@
+{
+  "id": "wedding-elegant",
+  "name": "Wedding Elegant",
+  "version": "1.0.0",
+  "category": "wedding",
+  "price": 299000,
+  "requiresCustomDomain": true,
+  "contributor": {
+    "id": "system",
+    "name": "Platform"
+  },
+  "capabilities": {
+    "maxPages": 5,
+    "allowDynamicPages": true,
+    "allowedPageTypes": ["home", "story", "gallery", "rsvp", "gift"],
+    "editableSlots": [
+      {
+        "id": "hero-layout",
+        "label": "Layout Hero",
+        "type": "variant",
+        "category": "layout",
+        "options": [
+          { "value": "centered", "label": "Tengah" },
+          { "value": "split-screen", "label": "Split Screen" }
+        ],
+        "default": "centered"
+      },
+      {
+        "id": "hero-size",
+        "label": "Tinggi Hero",
+        "type": "variant",
+        "category": "layout",
+        "options": [
+          { "value": "medium", "label": "Sedang" },
+          { "value": "large", "label": "Besar" },
+          { "value": "fullscreen", "label": "Full Screen" }
+        ],
+        "default": "large"
+      },
+      {
+        "id": "groom-name",
+        "label": "Nama Mempelai Pria",
+        "type": "text",
+        "category": "content",
+        "maxLength": 100,
+        "default": "John Doe"
+      },
+      {
+        "id": "bride-name",
+        "label": "Nama Mempelai Wanita",
+        "type": "text",
+        "category": "content",
+        "maxLength": 100,
+        "default": "Jane Smith"
+      },
+      {
+        "id": "wedding-date",
+        "label": "Tanggal Pernikahan",
+        "type": "text",
+        "category": "content",
+        "default": "25 Desember 2024"
+      },
+      {
+        "id": "hero-image",
+        "label": "Foto Hero",
+        "type": "image",
+        "category": "visual",
+        "aspectRatio": "16:9",
+        "default": "/placeholder-wedding.jpg"
+      },
+      {
+        "id": "hero-gradient",
+        "label": "Gradient Overlay",
+        "type": "gradient",
+        "category": "visual",
+        "default": "linear-gradient(135deg, rgba(232, 180, 184, 0.8) 0%, rgba(149, 117, 205, 0.8) 100%)"
+      },
+      {
+        "id": "overlay-opacity",
+        "label": "Opacity Overlay",
+        "type": "number",
+        "category": "visual",
+        "min": 0,
+        "max": 100,
+        "unit": "%",
+        "default": 40
+      },
+      {
+        "id": "primary-color",
+        "label": "Warna Tema",
+        "type": "color",
+        "category": "style",
+        "default": "#E8B4B8",
+        "presets": ["#E8B4B8", "#9575CD", "#81C784", "#FFB74D"]
+      },
+      {
+        "id": "heading-font",
+        "label": "Font Judul",
+        "type": "font",
+        "category": "style",
+        "options": [
+          { "value": "playfair", "label": "Playfair Display", "category": "serif" },
+          { "value": "cormorant", "label": "Cormorant", "category": "serif" },
+          { "value": "montserrat", "label": "Montserrat", "category": "sans-serif" }
+        ],
+        "default": "playfair"
+      },
+      {
+        "id": "button-style",
+        "label": "Style Tombol",
+        "type": "variant",
+        "category": "style",
+        "options": [
+          { "value": "solid", "label": "Solid" },
+          { "value": "outline", "label": "Outline" },
+          { "value": "gradient", "label": "Gradient" }
+        ],
+        "default": "solid"
+      },
+      {
+        "id": "animation-type",
+        "label": "Animasi Masuk",
+        "type": "variant",
+        "category": "effects",
+        "options": [
+          { "value": "none", "label": "Tanpa Animasi" },
+          { "value": "fade", "label": "Fade" },
+          { "value": "slide", "label": "Slide" },
+          { "value": "zoom", "label": "Zoom" }
+        ],
+        "default": "fade"
+      },
+      {
+        "id": "section-padding",
+        "label": "Padding Seksi",
+        "type": "spacing",
+        "category": "layout",
+        "min": 0,
+        "max": 200,
+        "step": 8,
+        "unit": "px",
+        "default": 80
+      },
+      {
+        "id": "border-radius",
+        "label": "Border Radius",
+        "type": "number",
+        "category": "style",
+        "min": 0,
+        "max": 50,
+        "unit": "px",
+        "default": 12
+      },
+      {
+        "id": "show-countdown",
+        "label": "Tampilkan Countdown",
+        "type": "toggle",
+        "category": "settings",
+        "default": true
+      },
+      {
+        "id": "story-title",
+        "label": "Judul Story",
+        "type": "text",
+        "category": "content",
+        "maxLength": 100,
+        "default": "Our Love Story"
+      },
+      {
+        "id": "story-content",
+        "label": "Konten Story",
+        "type": "richtext",
+        "category": "content",
+        "maxLength": 2000,
+        "default": "Kami bertemu pada tahun 2020 di kampus..."
+      },
+      {
+        "id": "story-image",
+        "label": "Foto Story",
+        "type": "image",
+        "category": "visual",
+        "aspectRatio": "4:3",
+        "default": "/placeholder-story.jpg"
+      },
+      {
+        "id": "gallery-title",
+        "label": "Judul Gallery",
+        "type": "text",
+        "category": "content",
+        "maxLength": 100,
+        "default": "Our Memories"
+      },
+      {
+        "id": "gallery-images",
+        "label": "Foto Gallery",
+        "type": "array",
+        "category": "visual",
+        "default": []
+      },
+      {
+        "id": "gallery-columns",
+        "label": "Jumlah Kolom Gallery",
+        "type": "select",
+        "category": "layout",
+        "options": [
+          { "value": 2, "label": "2 Kolom" },
+          { "value": 3, "label": "3 Kolom" },
+          { "value": 4, "label": "4 Kolom" }
+        ],
+        "default": 3
+      },
+      {
+        "id": "contact-title",
+        "label": "Judul Lokasi",
+        "type": "text",
+        "category": "content",
+        "maxLength": 100,
+        "default": "Lokasi & Waktu"
+      },
+      {
+        "id": "venue",
+        "label": "Nama Venue",
+        "type": "text",
+        "category": "content",
+        "maxLength": 200,
+        "default": "Grand Ballroom Hotel XYZ"
+      },
+      {
+        "id": "address",
+        "label": "Alamat Lengkap",
+        "type": "text",
+        "category": "content",
+        "maxLength": 300,
+        "default": "Jl. Merdeka No. 123, Jakarta"
+      },
+      {
+        "id": "ceremony-time",
+        "label": "Waktu Akad",
+        "type": "text",
+        "category": "content",
+        "default": "10:00 WIB"
+      },
+      {
+        "id": "reception-time",
+        "label": "Waktu Resepsi",
+        "type": "text",
+        "category": "content",
+        "default": "12:00 WIB"
+      },
+      {
+        "id": "map-url",
+        "label": "Google Maps URL",
+        "type": "link",
+        "category": "content",
+        "default": "https://maps.google.com"
+      },
+      {
+        "id": "show-map",
+        "label": "Tampilkan Map",
+        "type": "toggle",
+        "category": "settings",
+        "default": true
+      }
+    ]
+  },
+  "editorConfig": {
+    "allowedComponents": [
+      "Hero",
+      "Story",
+      "Gallery",
+      "RSVP",
+      "GiftRegistry",
+      "Countdown"
+    ]
+  },
+  "defaultPages": [
+    { "slug": "home", "name": "Beranda", "isDynamic": false }
+  ],
+  "mockData": {
+    "venue": "Grand Ballroom Hotel XYZ",
+    "address": "Jl. Merdeka No. 123, Jakarta",
+    "story": "Kami bertemu di kampus pada tahun 2020...",
+    "gallery": []
+  }
+}
